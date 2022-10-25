@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .heading {
+        @apply text-lg lg:text-xl;
+    }
+
+    .text {
+        @apply text-sm lg:text-base;
+    }
+
+    .button {
+        @apply text-lg font-medium;
+    }
+
+    .input {
+        @apply text rounded-default border border-Noir bg-Blanc p-4 focus-visible:ring-2 max-w-xl dark:bg-transparent dark:bg-Blanc;
+    }
+}
