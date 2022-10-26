@@ -33,7 +33,7 @@ const props = defineProps({
         <p class="w-fit">Personnaliser</p>
       </RouterLink>
       
-      <RouterLink to="/compteview" class="w-fit px-5 py-2 border-2 rounded-md" @click="menuState = !menuState">
+      <RouterLink to="/" class="w-fit px-5 py-2 border-2 rounded-md" @click="menuState = !menuState">
         <p class="w-fit">Mon compte</p>
       </RouterLink>
     </div>
