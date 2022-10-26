@@ -2,6 +2,7 @@
 import Logo from '@/components/icons/Logo.vue'
 import LightMode from '@/components/icons/LightMode.vue'
 import Footer from '@/components/Footer.vue'
+import AuthForm from '@/components/AuthForm.vue'
 
 </script>
 
@@ -14,7 +15,8 @@ import Footer from '@/components/Footer.vue'
             </div>
         </div>
     </section>
-    <section class="bg-Noir dark:bg-Blanc">
+    <section class="">
+        <AuthForm />
         <Footer />
     </section>
 </template>

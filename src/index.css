@@ -4,18 +4,22 @@
 
 @layer components {
     .heading {
-        @apply text-lg lg:text-xl;
+        @apply text-xl font-piazzolla;
     }
 
     .text {
-        @apply text-sm lg:text-base;
+        @apply text-sm font-montserrat;
     }
 
     .button {
-        @apply text-lg font-medium;
+        @apply text-lg font-medium font-poppins;
     }
 
     .input {
-        @apply text rounded-default border border-Noir bg-Blanc p-4 focus-visible:ring-2 max-w-xl dark:bg-transparent dark:bg-Blanc;
+        @apply rounded-xs border border-Noir bg-Blanc p-4 focus-visible:ring-2 focus-visible:ring-Bleu  sm:w-96 w-64;
+    }
+
+    .submit-button {
+        @apply text-Blanc rounded-default border border-Blanc bg-Bleu py-3 px-10 font-poppins
     }
 }
