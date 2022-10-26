@@ -27,7 +27,7 @@ async function loginFacebook(){
 </script>
 
 <template>
-    <div class="bg-Blanc flex flex-col items-center space-y-8 border-2 border-Noir mx-32 my-16 drop-shadow-2xl rounded-default">
+    <div class="bg-Blanc flex flex-col items-center space-y-8 border-2 border-Noir min-w-max mx-16 sm:mx-32 xl:mx-96 my-16 drop-shadow-2xl rounded-default">
         <h2 class="heading pt-8">Mon compte</h2>
         <FormKit 
             type="form" 
@@ -40,7 +40,7 @@ async function loginFacebook(){
             submit-label="Créer mon compte"
             :config="{
                 classes:{
-                    input: 'input flex justify-center ',
+                    input: 'input flex justify-center',
                     label: 'button',
                     form: 'flex flex-col gap-8',
                     checkbox: 'w-4'
@@ -48,7 +48,7 @@ async function loginFacebook(){
             }"
             :submit-attrs="{
                 classes: {
-                input: 'submit-button font-poppins ml-20',
+                input: 'submit-button font-poppins ml-4 sm:ml-20',
                 },
             }"
         >
@@ -60,7 +60,7 @@ async function loginFacebook(){
         <div>
             <div class="flex flex-row justify-center mb-8 gap-4">
                 <span class="w-32 border-b-2 mb-3 border-Noir border-opacity-50"></span>
-                <p class="font-poppins text-lg">OU</p>
+                <p class="font-poppins m text-lg">OU</p>
                 <span class="w-32 border-b-2 mb-3 border-Noir border-opacity-50"></span>
             </div>
             
