@@ -28,6 +28,9 @@ module.exports = {
         "default": "1.46875rem",
         "lg": "2.125rem"
        },
+       screens: {
+        'light': { 'raw': '(prefers-color-scheme: light)' },
+      },
     },
   },
   plugins: [

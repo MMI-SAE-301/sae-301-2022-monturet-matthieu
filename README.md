@@ -34,7 +34,7 @@ Noté sur 40.
 - [X] usage de Classes utilitaires (1pt)
   - lien vers sa définition
   - lien vers son usage
-- [ ] Composants graphiques (0-1-2pts)
+- [X] Composants graphiques (0-1-2pts)
   - liens
 - Technique CSS (0-1-2pts)
   - Quelles techniques (Eg. Styles graphiques (répétés) tous ajoutés par CSS et/ou
@@ -46,16 +46,16 @@ Noté sur 40.
     - ...
   - liens
   - [ ] Mise en page fluide
-- [ ] Mobile First (0-1-2pts)
+- [X] Mobile First (0-1-2pts)
   - [ ] Plusieurs tailles
     - Lesquelles...
-- [ ] Dark Mode (0-1-2pts)
-  - [ ] Simple usage de 'dark:'
+- [X] Dark Mode (0-1-2pts)
+  - [X] Simple usage de 'dark:'
   - [ ] Mise en place avec usage de custom property pour les couleurs. Ou usage de DaisyUI AVEC thèmes perso
     - liens
 - "tailwind.config.js" (0-1-2pts)
-  - [ ] usage basique couleurs/fonts
-  - [ ] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
+  - [X] usage basique couleurs/fonts
+  - [X] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
     - liens
 - Composants "accessibles" (0-1-2pts)
   - [ ] textes "accessibles" (eg. 'sr-only')
