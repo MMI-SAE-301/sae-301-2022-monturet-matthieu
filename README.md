@@ -3,7 +3,7 @@
 - **Nom : Monturet**
 - **Prénom : Matthieu**
 - **URL maquette Figma: https://www.figma.com/file/VEDREPcIkbjk4E61l8MsG1/Maquette-SAE-301?node-id=0%3A1**
-- **URL publique du site :**
+- **URL publique du site :https://sae301.femin-in.eu**
 - **URL projet Supabase : https://pqvvwryzmoqxtkovemel.supabase.co**
   - [X] Avez-vous invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase ?
 
