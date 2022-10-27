@@ -3,10 +3,9 @@ import Logo from "@/components/icons/Logo.vue";
 import LightMode from "@/components/icons/LightMode.vue";
 import DarkMode from "@/components/icons/DarkMode.vue";
 import { Bars3Icon } from "@heroicons/vue/20/solid";
+import { ref } from 'vue';
 
-const props = defineProps({
-  menuState: { type: Boolean, default: false },
-});
+const menuState = ref(false);
 </script>
 
 <template>
