@@ -21,6 +21,7 @@ const props = defineProps({
       <button @click="menuState = !menuState">
         <Bars3Icon class="h-10 w-8 light:fill-Blanc fill-Noir" />
       </button>
+      <span class="sr-only">Menu Hamburger</span>
     </div>
   </div>
 
@@ -29,14 +30,17 @@ const props = defineProps({
     <div class="flex flex-col items-center justify-center gap-6 p-4 text-lg font-poppins">
       <RouterLink to="/Montre/" class="w-fit p-2 border-2 rounded-md" @click="menuState = !menuState">
         <p class="w-fit">La SmartWatch</p>
+        <span class="sr-only">Bouton vers la page La SmartWatch</span>
       </RouterLink>
       
       <RouterLink to="/Montre/new" class="w-fit px-4 py-2 border-2 rounded-md" @click="menuState = !menuState">
         <p class="w-fit">Personnaliser</p>
+        <span class="sr-only">Bouton vers la page Personnaliser</span>
       </RouterLink>
       
       <RouterLink to="/" class="w-fit px-5 py-2 border-2 rounded-md" @click="menuState = !menuState">
         <p class="w-fit">Mon compte</p>
+        <span class="sr-only">Bouton vers la page Mon compte</span>
       </RouterLink>
     </div>
   </section>
