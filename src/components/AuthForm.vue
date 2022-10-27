@@ -9,7 +9,7 @@ const router = useRouter()
 const newUser = ref(false)
 
 // @ts-ignore
-async function signUp(data, node) {
+async function signIn(data, node) {
   const { user, error } = await (newUser.value
     ? supabase.auth.signUp(data)
     : supabase.auth.signIn(data));
@@ -58,7 +58,7 @@ async function loginFacebook(){
             email: '',
             password: '',
             }"
-            @submit="signUp"
+            @submit="signIn"
             :submit-label="newUser ? 'Créer mon compte' : 'Se connecter'"
             :config="{
                 classes:{

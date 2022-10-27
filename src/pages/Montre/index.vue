@@ -74,7 +74,9 @@ import DarkMode from '@/components/icons/DarkMode.vue'
 
     <div class="flex flex-col items-center gap-4 mb-32 text-Blanc light:text-Noir">
         <h2 class="heading mx-4 text-center">Personnalisez votre montre dès maintenant !</h2>
+        <RouterLink to="/Montre/new">
         <button class="submit-button mx-4">Personnaliser ma montre</button>
+        </RouterLink>
     </div>
     <Footer />
 </template>
