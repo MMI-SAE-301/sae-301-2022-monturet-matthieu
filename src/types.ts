@@ -61,3 +61,14 @@ export const nuances = {
     "#F2F2F2": "Blanc-gris très clair",
     "#EBEFF0": "Blanc"
 }
+
+export const materiaux = [
+    {
+      value: "",
+      label: "Plastique",
+    },
+    {
+      value: "/assets/cuir.webp",
+      label: "Cuir",
+    },
+];
