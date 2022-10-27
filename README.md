@@ -22,6 +22,26 @@ Vous avez rendu à la racine du projet :
 Pour les liens :
 [vers des fichiers](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes#relative-links-and-image-paths-in-readme-files) ou page d'un commit sur Github.
 
+[Définition des classes utilitaires](/src/index.css#L5)
+[Exemple d'utilisation des classes utilitaires](/src/components/AuthForm.vue#L66)
+
+[Composants graphiques](/src/components/AuthForm.vue)
+[Composants graphiques](/src/components/Footer.vue)
+[Composants graphiques](/src/components/Header.vue)
+[Composants graphiques](/src/components/icons/DarkMode.vue)
+[Composants graphiques](/src/components/icons/LightMode.vue)
+[Composants graphiques](/src/components/icons/Logo.vue)
+
+[Mise en page CSS](/src/pages/Montre/index.vue)
+
+[Dark Mode](/src/pages/index.vue)
+
+[Tailwind.config.js](/tailwind.config.js/#L8)
+[Tailwind.config.js](/tailwind.config.js/#L14)
+[Tailwind.config.js](/tailwind.config.js/#L19)
+[Tailwind.config.js](/tailwind.config.js/#L24)
+[Tailwind.config.js](/tailwind.config.js/#L31)
+
 Noté sur 40.
 
 - [README](/README.md) bien rempli (0-2-4pts)
@@ -58,7 +78,7 @@ Noté sur 40.
   - [X] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
     - liens
 - Composants "accessibles" (0-1-2pts)
-  - [ ] textes "accessibles" (eg. 'sr-only')
+  - [X] textes "accessibles" (eg. 'sr-only')
   - [ ] Contenu accessible ET Usage de composants étudié pour accessibilité (Eg. HeadlessUI)
 
 [^1]: Supprimez les mentions inutiles.
