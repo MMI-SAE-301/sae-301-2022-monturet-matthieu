@@ -12,8 +12,11 @@ import AuthForm from '@/components/AuthForm.vue'
         <div class="flex flex-row items-center sm:justify-between justify-center gap-4 button">
             <div class="flex space-x-4 ml-7">
                 <Logo class="h-10 w-24 fill-Noir light:fill-Blanc" />
+                <span class="sr-only">Logo du site</span>
                 <LightMode class="h-10 w-6 light:hidden" />
+                <span class="sr-only light:hidden">Icone du mode jour</span>
                 <DarkMode class="h-10 w-6 dark:hidden" />
+                <span class="sr-only dark-hidden">Icone du mode nuit</span>
             </div>
         </div>
     </section>

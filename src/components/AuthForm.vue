@@ -72,6 +72,7 @@ async function loginFacebook(){
                 input: 'submit-button font-poppins ml-4 sm:ml-24',
                 },
             }"
+            input-class="sr-only"
         >
             <FormKit name="name"        label="Nom *"                   type="text"     placeholder="Votre nom"             validation="required" />
             <FormKit name="firstname"   label="Prénom *"                type="text"     placeholder="Votre prénom"          validation="required" />
