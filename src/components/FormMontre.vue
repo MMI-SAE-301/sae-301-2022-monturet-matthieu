@@ -47,7 +47,8 @@ async function upsertMontre(dataForm, node) {
     <div class="flex flex-col xl:flex-row justify-center gap-16 text-Blanc light:text-Noir">
         <div class="mt-60">
             <FormKit 
-                type="form" 
+                type="form"
+                input-class="sr-only" 
                 v-model="montre" 
                 @submit="upsertMontre"
                 submit-label="Valider les changements"
@@ -78,9 +79,11 @@ async function upsertMontre(dataForm, node) {
             <button @click="(MontreRonde = true), (MontreCarree = false)">
                 <img class="mt-12 mr-8 ml-32" src="@/assets/Flèche jaune inverse.webp" alt="">
             </button>
+            <span class="sr-only">Flèche retour du carrousel</span>
             <button @click="(MontreCarree = true), (MontreRonde = false)">
                 <img src="@/assets/Flèche jaune.webp" alt="">
             </button>
+            <span class="sr-only">Flèche avant du carrousel</span>
         </div>
 
         <div class="light:hidden ml-32 xl:ml-4 xl:mt-12">
@@ -92,10 +95,12 @@ async function upsertMontre(dataForm, node) {
             <button @click="(MontreRonde = true), (MontreCarree = false)">
                 <img class="mt-12 mr-8 ml-32" src="@/assets/Flèche jaune inverse.webp" alt="">
             </button>
+            <span class="sr-only">Flèche retour du carrousel</span>
             
             <button @click="(MontreCarree = true), (MontreRonde = false)">
                 <img src="@/assets/Flèche jaune.webp" alt="">
             </button>
+            <span class="sr-only">Flèche avant du carrousel</span>
         </div>
     </div>
 </template>
