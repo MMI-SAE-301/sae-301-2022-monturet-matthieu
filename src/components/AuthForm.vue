@@ -1,6 +1,25 @@
 <script setup lang="ts">
 import Google from '@/components/icons/Google.vue'
 import Facebook from '@/components/icons/Facebook.vue'
+import { supabase, user } from '@/supabase'
+import { ref } from 'vue'
+import { useRouter } from "vue-router"
+
+const router = useRouter()
+const newUser = ref(false)
+
+// @ts-ignore
+async function signUp(data, node) {
+  const { user, error } = await (newUser.value
+    ? supabase.auth.signUp(data)
+    : supabase.auth.signIn(data));
+  if (error) {
+    console.error(error);
+    node.setErrors([error.message]);
+  } else {
+    router.push("/montre");
+  }
+}
 
 async function loginGoogle(){ 
     try { 
@@ -9,6 +28,7 @@ async function loginGoogle(){
         }); 
         if (error) throw error; 
     } catch (error) { 
+        // @ts-ignore
         alert(error.error_description || error.message); 
     }  
 }
@@ -20,6 +40,7 @@ async function loginFacebook(){
         }); 
         if (error) throw error; 
     } catch (error) { 
+        // @ts-ignore
         alert(error.error_description || error.message); 
     }  
 }
@@ -37,30 +58,42 @@ async function loginFacebook(){
             email: '',
             password: '',
             }"
-            submit-label="Créer mon compte"
+            @submit="signUp"
+            :submit-label="newUser ? 'Créer mon compte' : 'Se connecter'"
             :config="{
                 classes:{
                     input: 'input flex justify-center',
                     label: 'button',
                     form: 'flex flex-col gap-8',
-                    checkbox: 'w-4'
                 }
             }"
             :submit-attrs="{
                 classes: {
-                input: 'submit-button font-poppins ml-4 sm:ml-20',
+                input: 'submit-button font-poppins ml-4 sm:ml-24',
                 },
             }"
         >
-            <FormKit name="name"        label="Nom *"             type="text"     placeholder="Votre nom"             validation="required" />
-            <FormKit name="firstname"   label="Prénom *"          type="text"     placeholder="Votre prénom"          validation="required" />
-            <FormKit name="email"       label="Email *"           type="email"    placeholder="Votre email"           validation="required|email" />
-            <FormKit name="password"    label="Mot de passe *"    type="password" placeholder="Votre mot de passe"    validation="required|length:8,50" />
+            <FormKit name="name"        label="Nom *"                   type="text"     placeholder="Votre nom"             validation="required" />
+            <FormKit name="firstname"   label="Prénom *"                type="text"     placeholder="Votre prénom"          validation="required" />
+            <FormKit name="email"       label="Email *"                 type="email"    placeholder="Votre email"           validation="required|email" />
+            <FormKit name="password"    label="Mot de passe *"          type="password" placeholder="Votre mot de passe"    validation="required|length:8,50" />
+            <FormKit
+                :config="{
+                    classes: {
+                        label: 'text items-center'
+                    },
+                }"
+                name="newUser"
+                label="Nouvel utilisateur ?"
+                type="checkbox"
+                v-model="newUser"
+                validation="required"
+                wrapper-class="flex items-center gap-2" />
         </FormKit>
         <div>
             <div class="flex flex-row justify-center mb-8 gap-4">
                 <span class="w-32 border-b-2 mb-3 border-Noir border-opacity-50"></span>
-                <p class="font-poppins m text-lg">OU</p>
+                <p class="font-poppins text-lg">OU</p>
                 <span class="w-32 border-b-2 mb-3 border-Noir border-opacity-50"></span>
             </div>
             
