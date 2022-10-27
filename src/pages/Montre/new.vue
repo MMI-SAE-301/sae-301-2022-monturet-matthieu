@@ -3,6 +3,7 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import Logo from '@/components/icons/Logo.vue'
 import LightMode from '@/components/icons/LightMode.vue'
+import DarkMode from '@/components/icons/DarkMode.vue'
 import MontreRondeBlanche from '@/components/MontreRondeBlanche.vue'
 import MontreCarreeBlanche from '@/components/MontreCarreeBlanche.vue'
 import MontreRondeNoire from '@/components/MontreRondeNoire.vue'
@@ -49,33 +50,34 @@ async function upsertMontre(dataForm, node) {
 </script>
 
 <template>
-    <section class="bg-Blanc dark:bg-Noir">
+    <section class="bg-Blanc light:bg-Noir">
         <div class="md:hidden">
             <Header />
         </div>
 
         <div class="hidden flex-row items-center justify-between gap-4 md:flex button">
             <div class="flex space-x-4 ml-7">
-                <Logo class="h-10 w-24 fill-Noir dark:fill-Blanc" />
-                <LightMode class="h-10 w-6"/>
+                <Logo class="h-10 w-24 fill-Noir light:fill-Blanc" />
+                <LightMode class="h-10 w-6 light:hidden" />
+                <DarkMode class="h-10 w-6 dark:hidden" />
             </div>
             <div class="flex flex-row gap-12 mr-7">
                 <RouterLink to="/Montre/" class="w-fit">
-                    <p class="w-fit">La SmartWatch</p>
+                    <p class="w-fit light:text-Blanc text-Noir">La SmartWatch</p>
                 </RouterLink>
                 
-                <RouterLink to="/Montre/new" class="w-fit border-b-4 border-Bleu">
-                    <p class="w-fit">Personnaliser</p>
+                <RouterLink to="/Montre/new" class="w-fit  border-b-4 light:border-Jaune border-Bleu">
+                    <p class="w-fit light:text-Blanc text-Noir">Personnaliser</p>
                 </RouterLink>
                 
                 <RouterLink to="/" class="w-fit">
-                    <p class="w-fit">Mon compte</p>
+                    <p class="w-fit light:text-Blanc text-Noir">Mon compte</p>
                 </RouterLink>
             </div>
         </div>
     </section>
 
-    <div class="flex flex-col xl:flex-row justify-center gap-32">
+    <div class="flex flex-col xl:flex-row justify-center gap-32 text-Blanc light:text-Noir">
         <div class="mt-60">
             <FormKit 
                 type="form" 
@@ -84,7 +86,7 @@ async function upsertMontre(dataForm, node) {
                 submit-label="Valider les changements"
                 :config="{
                     classes:{
-                        fieldset: 'flex justify-center heading space-y-6 mb-16',
+                        fieldset: 'flex justify-center heading space-y-6 mb-16 mx-96',
                     }
                 }"
                 :submit-attrs="{
@@ -101,7 +103,7 @@ async function upsertMontre(dataForm, node) {
                 <ListMateriaux name="bracelet" label="Matériaux : Bracelet" />
             </FormKit>
         </div>
-        <div class="dark:hidden">
+        <div class="dark:hidden ml-32 xl:ml-4">
             <div class="w-96 flex">
                 <MontreRondeBlanche :class="{hidden: MontreCarree}" class="mt-12" v-bind="montre" />
                 <MontreCarreeBlanche :class="{hidden: MontreRonde}" class="mt-12" v-bind="montre" />
@@ -114,17 +116,17 @@ async function upsertMontre(dataForm, node) {
             </button>
         </div>
 
-        <div class="light:hidden">
-            <div class="flex flex-row gap-6">
+        <div class="light:hidden ml-32 xl:ml-4 xl:mt-12">
+            <div class="flex flex-row">
                 <MontreRondeNoire :class="{hidden: MontreCarree}" class="mt-12" v-bind="montre" />
                 <MontreCarreeNoire :class="{hidden: MontreRonde}" class="mt-12" v-bind="montre" />
             </div>
 
             <button @click="(MontreRonde = true), (MontreCarree = false)">
-                <img src="@/assets/Flèche jaune inverse.webp" alt="">
+                <img class="mt-12 mr-8 ml-32" src="@/assets/Flèche jaune inverse.webp" alt="">
             </button>
             
-            <button @click="(MontreRonde = true), (MontreCarree = false)">
+            <button @click="(MontreCarree = true), (MontreRonde = false)">
                 <img src="@/assets/Flèche jaune.webp" alt="">
             </button>
         </div>
