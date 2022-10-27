@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Logo from "@/components/icons/Logo.vue";
 import LightMode from "@/components/icons/LightMode.vue";
+import DarkMode from "@/components/icons/DarkMode.vue";
 import { Bars3Icon } from "@heroicons/vue/20/solid";
 
 const props = defineProps({
@@ -11,13 +12,14 @@ const props = defineProps({
 <template>
   <div class="flex justify-between">
     <div class="flex items-center h-12 space-x-3 ml-4">
-      <Logo class="h-10 w-24 fill-Noir" />
-      <LightMode class="h-10 w-6"/>
+      <Logo class="h-10 w-24 fill-Blanc light:fill-Noir" />
+      <LightMode class="h-10 w-6 dark:hidden"/>
+      <DarkMode class="h-10 w-6 light:hidden"/>
     </div>
     <!--Menu du header : MOBILE -->
     <div class="flex items-center mr-4 md:hidden">
       <button @click="menuState = !menuState">
-        <Bars3Icon class="h-10 w-8" />
+        <Bars3Icon class="h-10 w-8 fill-Blanc light:fill-Noir" />
       </button>
     </div>
   </div>
