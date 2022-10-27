@@ -3,37 +3,39 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import Logo from '@/components/icons/Logo.vue'
 import LightMode from '@/components/icons/LightMode.vue'
+import DarkMode from '@/components/icons/DarkMode.vue'
 
 </script>
 
 <template>
-    <section class="light:bg-Blanc bg-Noir">
+    <section class="bg-Blanc light:bg-Noir">
         <div class="md:hidden">
             <Header />
         </div>
 
         <div class="hidden flex-row items-center justify-between gap-4 md:flex button">
             <div class="flex space-x-4 ml-7">
-                <Logo class="h-10 w-24 fill-Noir dark:fill-Blanc" />
-                <LightMode class="h-10 w-6"/>
+                <Logo class="h-10 w-24 fill-Noir light:fill-Blanc" />
+                <LightMode class="h-10 w-6 light:hidden" />
+                <DarkMode class="h-10 w-6 dark:hidden" />
             </div>
             <div class="flex flex-row gap-12 mr-7">
-                <RouterLink to="/Montre/" class="w-fit border-b-4 border-Bleu">
-                    <p class="w-fit">La SmartWatch</p>
+                <RouterLink to="/Montre/" class="w-fit border-b-4 light:border-Jaune border-Bleu">
+                    <p class="w-fit light:text-Blanc text-Noir">La SmartWatch</p>
                 </RouterLink>
                 
                 <RouterLink to="/Montre/new" class="w-fit">
-                    <p class="w-fit">Personnaliser</p>
+                    <p class="w-fit light:text-Blanc text-Noir">Personnaliser</p>
                 </RouterLink>
                 
                 <RouterLink to="/" class="w-fit">
-                    <p class="w-fit">Mon compte</p>
+                    <p class="w-fit light:text-Blanc text-Noir">Mon compte</p>
                 </RouterLink>
             </div>
         </div>
     </section>
 
-    <div class="flex flex-col xl:flex-row xl:my-20 items-center">
+    <div class="flex flex-col xl:flex-row xl:my-20 items-center text-Blanc light:text-Noir">
         <div class="flex flex-col my-4 mx-4 sm:mx-12 xl:mx-20 2xl:mx-32">
             <div class="flex flex-col">
                 <div class="flex flex-col gap-12 mb-16">
@@ -70,7 +72,7 @@ import LightMode from '@/components/icons/LightMode.vue'
         <img class="w-fit dark:hidden mr-12 sm:mr-20 xl:mr-32" src="@/assets/MontresNoires.webp" alt="Image de montres personnalisées">
     </div>
 
-    <div class="flex flex-col items-center gap-4 mb-32">
+    <div class="flex flex-col items-center gap-4 mb-32 text-Blanc light:text-Noir">
         <h2 class="heading mx-4 text-center">Personnalisez votre montre dès maintenant !</h2>
         <button class="submit-button mx-4">Personnaliser ma montre</button>
     </div>
