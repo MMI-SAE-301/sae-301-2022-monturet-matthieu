@@ -77,11 +77,11 @@ async function upsertMontre(dataForm, node) {
                 <MontreCarreeBlanche :class="{hidden: MontreRonde}" class="mt-12" v-bind="montre" />
             </div>
             <button @click="(MontreRonde = true), (MontreCarree = false)">
-                <img class="mt-12 mr-8 ml-32" src="@/assets/Flèche jaune inverse.webp" alt="">
+                <img class="mt-12 mr-8 ml-32" src="@/assets/Flèche-jaune-inverse.webp" alt="">
             </button>
             <span class="sr-only">Flèche retour du carrousel</span>
             <button @click="(MontreCarree = true), (MontreRonde = false)">
-                <img src="@/assets/Flèche jaune.webp" alt="">
+                <img src="@/assets/Flèche-jaune.webp" alt="">
             </button>
             <span class="sr-only">Flèche avant du carrousel</span>
         </div>
@@ -93,12 +93,12 @@ async function upsertMontre(dataForm, node) {
             </div>
 
             <button @click="(MontreRonde = true), (MontreCarree = false)">
-                <img class="mt-12 mr-8 ml-32" src="@/assets/Flèche jaune inverse.webp" alt="">
+                <img class="mt-12 mr-8 ml-32" src="@/assets/Flèche-jaune-inverse.webp" alt="">
             </button>
             <span class="sr-only">Flèche retour du carrousel</span>
             
             <button @click="(MontreCarree = true), (MontreRonde = false)">
-                <img src="@/assets/Flèche jaune.webp" alt="">
+                <img src="@/assets/Flèche-jaune.webp" alt="">
             </button>
             <span class="sr-only">Flèche avant du carrousel</span>
         </div>
