@@ -43,12 +43,12 @@ Noté sur 40.
   - liens
 - Mise en page CSS (0-1-2pts)
   - Quelles techniques (Grilles Flex...)
-    - ...
+    - [Flex]
   - liens
-  - [ ] Mise en page fluide
+  - [X] Mise en page fluide
 - [X] Mobile First (0-1-2pts)
-  - [ ] Plusieurs tailles
-    - Lesquelles...
+  - [X] Plusieurs tailles
+    - sm - md - xl - 2xl
 - [X] Dark Mode (0-1-2pts)
   - [X] Simple usage de 'dark:'
   - [ ] Mise en place avec usage de custom property pour les couleurs. Ou usage de DaisyUI AVEC thèmes perso
