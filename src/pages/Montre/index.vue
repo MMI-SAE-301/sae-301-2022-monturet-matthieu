@@ -16,21 +16,27 @@ import DarkMode from '@/components/icons/DarkMode.vue'
         <div class="hidden flex-row items-center justify-between gap-4 md:flex button">
             <div class="flex space-x-4 ml-7">
                 <Logo class="h-10 w-24 fill-Noir light:fill-Blanc" />
+                <span class="sr-only">Logo du site</span>
                 <LightMode class="h-10 w-6 light:hidden" />
+                <span class="sr-only">Bouton du mode jour</span>
                 <DarkMode class="h-10 w-6 dark:hidden" />
+                <span class="sr-only">Bouton du mode nuit</span>
             </div>
             <div class="flex flex-row gap-12 mr-7">
                 <RouterLink to="/Montre/" class="w-fit border-b-4 light:border-Jaune border-Bleu">
                     <p class="w-fit light:text-Blanc text-Noir">La SmartWatch</p>
                 </RouterLink>
+                <span class="sr-only">Lien vers la page La SmartWatch</span>
                 
                 <RouterLink to="/Montre/new" class="w-fit">
                     <p class="w-fit light:text-Blanc text-Noir">Personnaliser</p>
                 </RouterLink>
+                <span class="sr-only">Lien vers la page Personnaliser</span>
                 
                 <RouterLink to="/" class="w-fit">
                     <p class="w-fit light:text-Blanc text-Noir">Mon compte</p>
                 </RouterLink>
+                <span class="sr-only">Lien vers la page Mon compte</span>
             </div>
         </div>
     </section>
