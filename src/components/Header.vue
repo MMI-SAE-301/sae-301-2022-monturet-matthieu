@@ -12,14 +12,14 @@ const props = defineProps({
 <template>
   <div class="flex justify-between">
     <div class="flex items-center h-12 space-x-3 ml-4">
-      <Logo class="h-10 w-24 fill-Blanc light:fill-Noir" />
-      <LightMode class="h-10 w-6 dark:hidden"/>
-      <DarkMode class="h-10 w-6 light:hidden"/>
+      <Logo class="h-10 w-24 light:fill-Blanc fill-Noir" />
+      <LightMode class="h-10 w-6 light:hidden"/>
+      <DarkMode class="h-10 w-6 dark:hidden"/>
     </div>
     <!--Menu du header : MOBILE -->
     <div class="flex items-center mr-4 md:hidden">
       <button @click="menuState = !menuState">
-        <Bars3Icon class="h-10 w-8 fill-Blanc light:fill-Noir" />
+        <Bars3Icon class="h-10 w-8 light:fill-Blanc fill-Noir" />
       </button>
     </div>
   </div>
